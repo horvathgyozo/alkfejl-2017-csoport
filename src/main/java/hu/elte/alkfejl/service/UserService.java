@@ -42,4 +42,8 @@ public class UserService {
     public User getLoggedInUser() {
         return user;
     }
+    
+    public void logout() {
+        user = null;
+    }
 }

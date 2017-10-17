@@ -1,5 +1,7 @@
 package hu.elte.alkfejl.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -20,6 +22,7 @@ import lombok.NoArgsConstructor;
 public class User {
     
     @OneToMany(targetEntity = Issue.class, mappedBy = "user")
+    @JsonIgnore
     private List<Issue> issues;
     
     @Id
