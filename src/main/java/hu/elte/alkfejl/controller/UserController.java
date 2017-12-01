@@ -45,6 +45,6 @@ public class UserController {
     @PostMapping("/logout")
     public ResponseEntity<User> logout(@RequestBody User user) {
         userService.logout();
-        return ResponseEntity.ok().build();
+        return ResponseEntity.status(204).build();
     }
 }
